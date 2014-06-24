@@ -3,5 +3,7 @@
 
     <string name="app_name">Estacionamiento Medido Inteligente</string>
     <string name="action_settings">Opciones</string>
+    <string name="patente">Patente:</string>
+    <string name="clave">Clave:</string>
 
 </resources>

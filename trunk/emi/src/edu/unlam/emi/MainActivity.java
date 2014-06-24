@@ -1,10 +1,13 @@
 package edu.unlam.emi;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +15,10 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		
 		setContentView(R.layout.layout_principal);
 
 		final Button botonEstacionamiento = (Button) findViewById(R.id.boton_estacionamiento);
@@ -25,19 +32,28 @@ public class MainActivity extends ActionBarActivity {
 			public void onClick(View v) {
 
 				if (v == botonEstacionamiento) {
-					// doStuff
+					Intent intentEstacionamiento = new Intent(MainActivity.this,EstacionamientoActivity.class);
+					MainActivity.this.startActivity(intentEstacionamiento);
 				}
 				if (v == botonConsumos) {
-					// doStuff
+					Intent intentConsumos = new Intent(MainActivity.this,ConsumoActivity.class);
+					MainActivity.this.startActivity(intentConsumos);
+
 				}
 				if (v == botonCredito) {
-					// doStuff
+					Intent intentCredito = new Intent(MainActivity.this,CreditoActivity.class);
+					MainActivity.this.startActivity(intentCredito);
+
 				}
 				if (v == botonTransito) {
-					// doStuff
+					Intent intentTransito = new Intent(MainActivity.this,TransitoActivity.class);
+					MainActivity.this.startActivity(intentTransito);
+
 				}
 				if (v == botonDatos) {
-					// doStuff
+					Intent intentDatos = new Intent(MainActivity.this,DatosActivity.class);
+					MainActivity.this.startActivity(intentDatos);
+
 				}
 				
 			}
