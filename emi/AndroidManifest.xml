@@ -26,6 +26,26 @@
             android:name="edu.unlam.emi.MainActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="edu.unlam.emi.ConsumoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.unlam.emi.CreditoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.unlam.emi.DatosActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.unlam.emi.EstacionamientoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.unlam.emi.TransitoActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
