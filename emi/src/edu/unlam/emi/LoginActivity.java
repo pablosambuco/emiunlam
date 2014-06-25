@@ -1,6 +1,6 @@
 package edu.unlam.emi;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,18 +10,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.layout_login);
-
+		
 		final Button botonLogin = (Button) findViewById(R.id.boton_login);
 
 		View.OnClickListener handler = new View.OnClickListener() {
@@ -29,8 +28,7 @@ public class LoginActivity extends ActionBarActivity {
 			public void onClick(View v) {
 
 				if (v == botonLogin) {
-					Intent intentMain = new Intent(LoginActivity.this,
-							MainActivity.class);
+					Intent intentMain = new Intent(LoginActivity.this,MainActivity.class);
 					LoginActivity.this.startActivity(intentMain);
 				}
 			}
