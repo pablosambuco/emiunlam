@@ -22,29 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="edu.unlam.emi.MainActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.MainActivity" >
         </activity>
-        <activity
-            android:name="edu.unlam.emi.ConsumoActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.ConsumoActivity" >
         </activity>
-        <activity
-            android:name="edu.unlam.emi.CreditoActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.CreditoActivity" >
         </activity>
-        <activity
-            android:name="edu.unlam.emi.DatosActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.DatosActivity" >
         </activity>
-        <activity
-            android:name="edu.unlam.emi.EstacionamientoActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.EstacionamientoActivity" >
         </activity>
-        <activity
-            android:name="edu.unlam.emi.TransitoActivity"
-            android:label="@string/app_name" >
+        <activity android:name="edu.unlam.emi.TransitoActivity" >
         </activity>
     </application>
 

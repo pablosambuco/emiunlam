@@ -1,6 +1,6 @@
 package edu.unlam.emi;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,51 +9,25 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class CreditoActivity extends ActionBarActivity {
+public class CreditoActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
+
 		setContentView(R.layout.layout_credito);
-
-		final Button botonEstacionamiento = (Button) findViewById(R.id.boton_estacionamiento);
-		final Button botonConsumos = (Button) findViewById(R.id.boton_consumos);
-		final Button botonCredito = (Button) findViewById(R.id.boton_credito);
-		final Button botonTransito = (Button) findViewById(R.id.boton_transito);
-		final Button botonDatos = (Button) findViewById(R.id.boton_datos);
-
+		
 		View.OnClickListener handler = new View.OnClickListener() {
 
 			public void onClick(View v) {
 
-				if (v == botonEstacionamiento) {
-					// doStuff
-				}
-				if (v == botonConsumos) {
-					// doStuff
-				}
-				if (v == botonCredito) {
-					// doStuff
-				}
-				if (v == botonTransito) {
-					// doStuff
-				}
-				if (v == botonDatos) {
-					// doStuff
-				}
-				
 			}
+
 		};
-		
-		botonEstacionamiento.setOnClickListener(handler);
-		botonConsumos.setOnClickListener(handler);
-		botonCredito.setOnClickListener(handler);
-		botonTransito.setOnClickListener(handler);
-		botonDatos.setOnClickListener(handler);
+
 	}
 
 	@Override

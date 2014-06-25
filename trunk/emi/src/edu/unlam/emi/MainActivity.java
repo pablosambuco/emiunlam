@@ -1,6 +1,6 @@
 package edu.unlam.emi;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +18,9 @@ public class MainActivity extends ActionBarActivity {
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
-		setContentView(R.layout.layout_principal);
 
+		setContentView(R.layout.layout_principal);
+		
 		final Button botonEstacionamiento = (Button) findViewById(R.id.boton_estacionamiento);
 		final Button botonConsumos = (Button) findViewById(R.id.boton_consumos);
 		final Button botonCredito = (Button) findViewById(R.id.boton_credito);
@@ -35,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
 					Intent intentEstacionamiento = new Intent(MainActivity.this,EstacionamientoActivity.class);
 					MainActivity.this.startActivity(intentEstacionamiento);
 				}
+								
 				if (v == botonConsumos) {
 					Intent intentConsumos = new Intent(MainActivity.this,ConsumoActivity.class);
 					MainActivity.this.startActivity(intentConsumos);
