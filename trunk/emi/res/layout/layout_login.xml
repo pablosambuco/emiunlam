@@ -16,7 +16,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/emi" />
-
+    
+    <!--Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        tools:targetApi="14" /-->
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -27,17 +33,21 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textoLogin1"
+                android:id="@+id/textoPatente"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:gravity="right|center_vertical"
                 android:text="@string/patente"
+                android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:id="@+id/textoLogin2"
-                android:layout_width="wrap_content"
+                android:id="@+id/textoPassword"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:gravity="center_vertical|right"
                 android:text="@string/clave"
+                android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </LinearLayout>
@@ -48,21 +58,27 @@
             android:orientation="vertical" >
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/patente"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:ems="10" />
+                android:ems="10"
+                android:hint="AAA000"
+                android:inputType="textCapCharacters" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:ems="10"
                 android:inputType="textPassword" />
-
         </LinearLayout>
-
     </LinearLayout>
+
+    <!-- Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+		tools:targetApi="14" /-->        
 
     <Button
         android:id="@+id/boton_login"
