@@ -1,5 +1,7 @@
 package edu.unlam.emi;
 
+import java.util.regex.Pattern;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LoginActivity extends Activity {
 
@@ -17,19 +20,28 @@ public class LoginActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.layout_login);
-		
+
 		final Button botonLogin = (Button) findViewById(R.id.boton_login);
+		final EditText patente = (EditText) findViewById(R.id.patente);
+		final EditText password = (EditText) findViewById(R.id.password);
+
+		final String PATENTE_REGEX = "[A-Z]{3}[0-9]{3}";
 
 		View.OnClickListener handler = new View.OnClickListener() {
 
 			public void onClick(View v) {
 
 				if (v == botonLogin) {
-					Intent intentMain = new Intent(LoginActivity.this,MainActivity.class);
-					LoginActivity.this.startActivity(intentMain);
+
+					if (validarPatente(patente, PATENTE_REGEX)	&& validarPassword(patente,password)) {
+						Intent intentMain = new Intent(LoginActivity.this,MainActivity.class);
+						LoginActivity.this.startActivity(intentMain);
+						finish();
+					}
 				}
 			}
 		};
@@ -56,6 +68,38 @@ public class LoginActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	public boolean validarPatente(EditText patente, String regex) {
+
+		String text = patente.getText().toString().trim();
+		patente.setError(null);
+
+		if (text.length() == 0) {
+			patente.setError("Patente requerida");
+			return false;
+		}
+
+		if (!Pattern.matches(regex, text)) {
+			patente.setError("Patente no válida");
+			return false;
+		}
+
+		return true;
+	}
+
+	public boolean validarPassword(EditText patente, EditText password) {
+
+		String textoPatente = patente.getText().toString().trim();
+		String textoPassword = password.getText().toString().trim();
+		password.setError(null);
+
+		if (textoPassword.length() == 0) {
+			password.setError("Contraseña requerida");
+			return false;
+		}
+
+		return true;
 	}
 
 }
