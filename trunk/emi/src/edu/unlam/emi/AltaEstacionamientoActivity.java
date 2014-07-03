@@ -1,11 +1,9 @@
 package edu.unlam.emi;
 
-import edu.unlam.emi.util.DatePickerFragment;
+import edu.unlam.emi.model.SimuladorEstacionamiento;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,9 +11,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
-public class ConsumoActivity extends FragmentActivity {
+public class AltaEstacionamientoActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,38 +22,24 @@ public class ConsumoActivity extends FragmentActivity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentView(R.layout.layout_consumo);
+		setContentView(R.layout.layout_estacionamiento_alta);
 
-		final ImageButton botonDesde = (ImageButton) findViewById(R.id.buscar_desde);
-		final ImageButton botonHasta = (ImageButton) findViewById(R.id.buscar_hasta);
-
-		final EditText desde = (EditText) findViewById(R.id.fecha_desde);
-		final EditText hasta = (EditText) findViewById(R.id.fecha_hasta);
+		final Button botonAlta = (Button) findViewById(R.id.boton_alta);
+		final EditText plaza = (EditText) findViewById(R.id.plaza);
 		
-		final Button botonBuscar = (Button) findViewById(R.id.boton_buscar);
-
 		View.OnClickListener handler = new View.OnClickListener() {
 
 			public void onClick(View v) {
-				if (v == botonDesde) {
-				    DialogFragment fragment = new DatePickerFragment(desde);
-				    fragment.show(getSupportFragmentManager(), "datePicker");
+				if (v == botonAlta) {
+					if (validarPlaza(plaza)) {
+						SimuladorEstacionamiento.getInstance().estacionar(plaza.getText().toString().trim());
+						finish();
+					}
 				}
-				if (v == botonHasta) {
-				    DialogFragment fragment = new DatePickerFragment(hasta);
-				    fragment.show(getSupportFragmentManager(), "datePicker");
-				}
-				if (v == botonBuscar) {
-					Intent intentListaConsumo = new Intent(ConsumoActivity.this,ListaConsumoActivity.class);
-					ConsumoActivity.this.startActivity(intentListaConsumo);
-				}				
 			}
-
 		};
-		
-		botonDesde.setOnClickListener(handler);
-		botonHasta.setOnClickListener(handler);
-		botonBuscar.setOnClickListener(handler);
+
+		botonAlta.setOnClickListener(handler);
 
 	}
 
@@ -79,4 +62,20 @@ public class ConsumoActivity extends FragmentActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	public boolean validarPlaza(EditText plaza) {
+
+		String textoPlaza = plaza.getText().toString().trim();
+		plaza.setError(null);
+
+		if (textoPlaza.length() == 0) {
+			plaza.setError("Plaza requerida");
+			return false;
+		}
+
+		return true;
+	}
+
+	
 }
+

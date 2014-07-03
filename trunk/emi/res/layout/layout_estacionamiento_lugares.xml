@@ -22,39 +22,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Estacionamiento"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/texto_plaza"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20"
-        android:gravity="center_vertical|center_horizontal"
+        android:text="Lugares Disponibles"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/boton_alta"
+        android:id="@+id/boton_buscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alta Estacionamiento" />
-
-    <Button
-        android:id="@+id/boton_baja"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baja Estacionamiento" />
-
-    <Button
-        android:id="@+id/boton_lugares"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lugares Disponibles" />
-
-    <Button
-        android:id="@+id/boton_guiar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guiar" />
+        android:text="Buscar" />
 
 </LinearLayout>
