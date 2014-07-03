@@ -41,16 +41,19 @@ public class MainActivity extends Activity {
 					MainActivity.this.startActivity(intentConsumos);
 
 				}
+				
 				if (v == botonCredito) {
 					Intent intentCredito = new Intent(MainActivity.this,CreditoActivity.class);
 					MainActivity.this.startActivity(intentCredito);
 
 				}
+				
 				if (v == botonTransito) {
 					Intent intentTransito = new Intent(MainActivity.this,TransitoActivity.class);
 					MainActivity.this.startActivity(intentTransito);
 
 				}
+				
 				if (v == botonDatos) {
 					Intent intentDatos = new Intent(MainActivity.this,DatosActivity.class);
 					MainActivity.this.startActivity(intentDatos);

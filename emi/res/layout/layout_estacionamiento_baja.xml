@@ -26,35 +26,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/texto_plaza"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.20"
+        android:layout_height="match_parent"
         android:gravity="center_vertical|center_horizontal"
+        android:text="Su último estacionamiento fue dado de baja.\n\nFecha: 12-07-2014\nHora: 10:45 hs\nImporte: $7,50"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/boton_alta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alta Estacionamiento" />
-
-    <Button
-        android:id="@+id/boton_baja"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baja Estacionamiento" />
-
-    <Button
-        android:id="@+id/boton_lugares"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lugares Disponibles" />
-
-    <Button
-        android:id="@+id/boton_guiar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guiar" />
 
 </LinearLayout>

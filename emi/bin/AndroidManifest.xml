@@ -33,6 +33,16 @@
         </activity>
         <activity android:name="edu.unlam.emi.TransitoActivity" >
         </activity>
+        <activity android:name="edu.unlam.emi.AltaEstacionamientoActivity" >
+        </activity>
+        <activity android:name="edu.unlam.emi.BajaEstacionamientoActivity" >
+        </activity>
+        <activity android:name="edu.unlam.emi.LugaresEstacionamientoActivity" >
+        </activity>
+        <activity android:name="edu.unlam.emi.GuiarEstacionamientoActivity" >
+        </activity>
+        <activity android:name="edu.unlam.emi.ListaConsumoActivity" >
+        </activity>        
     </application>
 
 </manifest>
