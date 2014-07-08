@@ -16,77 +16,93 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/emi" />
-    
-    <!--Space
+
+    <!--
+        Space
         android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        tools:targetApi="14" /-->
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        tools:targetApi="14" /
+    -->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textoPatente"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="right|center_vertical"
-                android:text="@string/patente"
-                android:textAllCaps="false"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/textoPassword"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="@string/clave"
-                android:textAllCaps="false"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <EditText
-                android:id="@+id/patente"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:hint="AAA000"
-                android:inputType="textCapCharacters" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="textPassword" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!-- Space
+    <!--
+         Space
         android:id="@+id/space1"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-		tools:targetApi="14" /-->        
+		tools:targetApi="14" /
+    -->
 
-    <Button
-        android:id="@+id/boton_login"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:text="Login"
-        android:width="100dp" />
+        android:layout_height="260dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textoPatente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/patente"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textoPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/clave"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/patente"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:hint="AAA000"
+                    android:inputType="textCapCharacters" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/boton_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/boton_naranja"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>

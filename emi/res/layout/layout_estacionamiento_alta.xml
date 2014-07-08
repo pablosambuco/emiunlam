@@ -44,13 +44,17 @@
             android:ems="10"
             android:hint="######"
             android:inputType="textCapCharacters" />
-
     </LinearLayout>
 
     <Button
         android:id="@+id/boton_alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirmar" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/boton_azul"
+        android:text="Confirmar"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </LinearLayout>

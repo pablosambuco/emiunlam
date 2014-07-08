@@ -235,10 +235,12 @@ int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable bg 0x7f020057
-int drawable calendar 0x7f020058
-int drawable emi 0x7f020059
-int drawable guiar_gps 0x7f02005a
-int drawable ic_launcher 0x7f02005b
+int drawable boton_azul 0x7f020058
+int drawable boton_naranja 0x7f020059
+int drawable calendar 0x7f02005a
+int drawable emi 0x7f02005b
+int drawable guiar_gps 0x7f02005c
+int drawable ic_launcher 0x7f02005d
 int id LinearLayout1 0x7f05003c
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015

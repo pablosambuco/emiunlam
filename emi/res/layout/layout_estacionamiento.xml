@@ -37,24 +37,44 @@
         android:id="@+id/boton_alta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alta Estacionamiento" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"        
+        android:background="@drawable/boton_azul"
+        android:text="Alta Estacionamiento"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/boton_baja"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Baja Estacionamiento" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/boton_azul"
+        android:text="Baja Estacionamiento"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/boton_lugares"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lugares Disponibles" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/boton_azul"
+        android:text="Lugares Disponibles"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/boton_guiar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guiar" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/boton_azul"
+        android:text="Guiar"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </LinearLayout>
