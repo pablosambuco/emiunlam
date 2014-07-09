@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".DatosActivity" >
+    tools:context=".CreditoActivity" >
 
     <ImageView
         android:id="@+id/imageView2"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Mis Datos"
+        android:text="Cambiar Clave"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
@@ -39,18 +39,17 @@
                 android:id="@+id/texto1"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="Nombre: "
+                android:gravity="center_vertical|left"
+                android:text="Clave actual: "
                 android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
-                android:id="@+id/nombre"
-                android:layout_width="200dp"
+                android:id="@+id/clave0"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:ems="10"
-                android:enabled="false" />
-
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,67 +61,17 @@
                 android:id="@+id/texto2"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="Apellido: "
+                android:gravity="center_vertical|left"
+                android:text="Nueva Clave: "
                 android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
-                android:id="@+id/apellido"
-                android:layout_width="200dp"
+                android:id="@+id/clave1"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:ems="10"
-                android:enabled="false" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right" >
-
-            <TextView
-                android:id="@+id/texto3"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="DNI: "
-                android:textAllCaps="false"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <EditText
-                android:id="@+id/dni"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:enabled="false" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right" >
-
-            <TextView
-                android:id="@+id/texto4"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="Patente: "
-                android:textAllCaps="false"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <EditText
-                android:id="@+id/patente"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:ems="10"
-                android:enabled="false" >
-
-                <requestFocus />
-            </EditText>
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <LinearLayout
@@ -132,24 +81,20 @@
             android:gravity="right" >
 
             <TextView
-                android:id="@+id/texto5"
+                android:id="@+id/texto3"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:gravity="center_vertical|right"
-                android:text="Clave: "
+                android:gravity="center_vertical|left"
+                android:text="Confirmar Clave: "
                 android:textAllCaps="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
-                android:id="@+id/password"
-                android:layout_width="200dp"
+                android:id="@+id/clave2"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:ems="10"
-                android:enabled="false"
-                android:inputType="textPassword" >
-
-                <requestFocus />
-            </EditText>
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <Button
@@ -159,9 +104,17 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/boton_naranja"
-            android:text="Cambiar Clave"
+            android:text="Cambiar clave"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/texto_ok"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Clave cambiada con éxito"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
 </LinearLayout>
