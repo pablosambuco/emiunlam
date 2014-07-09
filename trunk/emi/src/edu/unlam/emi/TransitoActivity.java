@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class TransitoActivity extends Activity {
 
@@ -20,14 +21,14 @@ public class TransitoActivity extends Activity {
 	
 		setContentView(R.layout.layout_transito);
 		
-		View.OnClickListener handler = new View.OnClickListener() {
-
-			public void onClick(View v) {
-
-			}
-
-		};
-
+		TextView textoTransito = (TextView) findViewById(R.id.texto_transito);
+		
+		textoTransito.setText("Corte total en Camino del Buen Ayre por niebla ambos sentidos\n\n" +
+				              "Corte por operativo anti piquete en colectora de General Paz altura Miguelete sentido Riachuelo\n\n" +
+				              "Piquete en Acceso Sudeste altura Bernal. Demoras en Autopista BsAs-La Plata mano al sur\n\n" +
+				              "Sigue cerrada Au Illia al centro con desvío a Avenida Sarmiento para todo el tránsito de Lugones\n\n" +
+				              "Continúa el corte de la salida de Au 25 de Mayo a 9 de Julio por obras del Metrobus porteño" );
+		
 	}
 
 	@Override
