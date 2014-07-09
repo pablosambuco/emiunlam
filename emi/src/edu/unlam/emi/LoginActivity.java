@@ -2,6 +2,8 @@ package edu.unlam.emi;
 
 import java.util.regex.Pattern;
 
+import edu.unlam.emi.model.SimuladorLogin;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +40,8 @@ public class LoginActivity extends Activity {
 				if (v == botonLogin) {
 
 					if (validarPatente(patente, PATENTE_REGEX)	&& validarPassword(patente,password)) {
+						SimuladorLogin.getInstance().setPatente(patente.getText().toString().trim());
+						SimuladorLogin.getInstance().setPassword(password.getText().toString().trim());
 						Intent intentMain = new Intent(LoginActivity.this,MainActivity.class);
 						LoginActivity.this.startActivity(intentMain);
 						finish();
