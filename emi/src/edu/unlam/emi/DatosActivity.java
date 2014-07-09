@@ -71,4 +71,22 @@ public class DatosActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
+	
+	protected void onRestart() {
+		super.onRestart();
+
+		final EditText nombre = (EditText) findViewById(R.id.nombre);
+		final EditText apellido = (EditText) findViewById(R.id.apellido);
+		final EditText dni = (EditText) findViewById(R.id.dni);
+		final EditText patente = (EditText) findViewById(R.id.patente);
+		final EditText password = (EditText) findViewById(R.id.password);
+
+		nombre.setText("José");
+		apellido.setText("Rodriguez");
+		dni.setText("10.345.278");
+		patente.setText(SimuladorLogin.getInstance().getPatente());
+		password.setText(SimuladorLogin.getInstance().getPassword());
+	
+	}
+	
 }
