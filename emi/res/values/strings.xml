@@ -6,4 +6,10 @@
     <string name="patente">Patente:</string>
     <string name="clave">Clave:</string>
 
+    <string-array name="tarjetas">
+        <item>VISA</item>
+        <item>American Express</item>
+        <item>Mastercard</item>
+    </string-array>
+
 </resources>
